@@ -1,0 +1,60 @@
+extends base
+block content
+ each Student in students
+  section.home-section
+    .imgbox
+      img.imgg(src=`image/${Student.image}` alt='yashImage')
+    .box
+      .row
+        .column
+          .fields
+            | Name :- 
+            span= Student.name
+          p.fields
+            | CollegeId :- 
+            span= Student.collegeId
+          p.fields
+            | Date Of Birth :- 
+            span= Student.dateOfBirth.toLocaleString('en-us', {month: 'long' , year: 'numeric'})
+          p.fields
+            | Blood Group :- 
+            span= Student.bloodGroup
+          p.fields
+            | Email :- 
+            span= Student.email
+          p.fields
+            | Phone no :- 
+            span= Student.phoneNo
+          p.fields
+            | Address :- 
+            span= Student.address
+          p.fields
+            | country :- 
+            span= Student.country
+        .column
+          p.fields
+            | Secondary Percent :- 
+            span= Student.secondaryPercent
+          p.fields
+            | Senior Secondary percent 
+            span= Student.seniorSecondaryPercent
+          p.fields
+            | Secondary Board 
+            span= Student.secondaryBoard
+          p.fields
+            | Senior Secondary Board 
+            span= Student.seniorSecondaryBoard
+          p.fields
+            | Addhar :- 
+            span= Student.addhar
+          p.fields
+            | Caste :- 
+            span= Student.caste
+          p.fields
+            | Date Of Admission :- 
+            span= Student.dateOfAddmission.toLocaleString('en-us', {month: 'long' , year: 'numeric'})
+          p.fields
+            | Secondary Roll No. :- 
+            span= Student.secondaryRoll
+    footer.footer
+      p Copyright issue || Yash Porwal
